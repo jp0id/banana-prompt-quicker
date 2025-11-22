@@ -37,13 +37,14 @@ WIP，上架中
 
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/install.png?raw=true" width="300">
 
-1. 访问 [Google AI Studio](https://aistudio.google.com/) 或 [Gemini](https://gemini.google.com/) 开始使用
+3. 访问 [Google AI Studio](https://aistudio.google.com/) 或 [Gemini](https://gemini.google.com/) 开始使用
 
 
 ## 🤝 贡献提示词
 
-1. Fork 本仓库
-2. 编辑 `prompts.json` 文件,添加你的提示词:
+直接开 Issue，形式不限，可以直接分享你的创意，或者自媒体案例链接...
+
+但建议包含以下信息
 ```json
 {
   "title": "提示词标题",
@@ -54,8 +55,6 @@ WIP，上架中
   "mode": "generate or edit"
 }
 ```
-3. 提交 Pull Request
-
 
 ---
 
@@ -67,7 +66,8 @@ WIP，上架中
       <strong>AI 学习交流社群</strong>
     </td>
     <td align="center">
-      <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/glidea.png?raw=true" width="300">
+      <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/glidea.png?raw=true" width="250">
+      <br>
       <strong><a href="https://glidea.zenfeed.xyz/">我的其它项目</a></strong>
     </td>
   </tr>
