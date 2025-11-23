@@ -98,6 +98,8 @@ class BananaModal {
                 optionsContainer.style.display = 'none'
                 optionsContainer.setAttribute('data-visible', 'false')
 
+                this.populateCategoryDropdown(optionsContainer, triggerText)
+
                 this.applyFilters()
             }
 
@@ -317,7 +319,7 @@ class BananaModal {
 
         const pagination = document.createElement('div')
         pagination.id = 'prompts-pagination'
-        pagination.style.cssText = `padding: ${mobile ? '12px' : '16px'}; border-top: 1px solid ${colors.border}; display: flex; justify-content: center; align-items: center; gap: 16px; background: ${colors.surface};`
+        pagination.style.cssText = `padding: ${mobile ? '12px' : '16px'}; border-top: 1px solid ${colors.border}; display: flex; justify-content: center; align-items: center; gap: 16px; background: ${colors.surface}; border-radius: ${mobile ? '0' : '0 0 20px 20px'};`
 
         container.appendChild(scrollArea)
         container.appendChild(pagination)
@@ -473,9 +475,9 @@ class BananaModal {
         }
         // Layout configuration
         if (mobile) {
-            pagination.style.cssText = `padding: 12px; border-top: 1px solid ${colors.border}; display: flex; flex-direction: column; align-items: center; gap: 12px; background: ${colors.surface};`
+            pagination.style.cssText = `padding: 12px; border-top: 1px solid ${colors.border}; display: flex; flex-direction: column; align-items: center; gap: 12px; background: ${colors.surface}; border-radius: 0;`
         } else {
-            pagination.style.cssText = `padding: 16px 24px; border-top: 1px solid ${colors.border}; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: ${colors.surface};`
+            pagination.style.cssText = `padding: 16px 24px; border-top: 1px solid ${colors.border}; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: ${colors.surface}; border-radius: 0 0 20px 20px;`
         }
 
         const createBtn = (text, disabled, onClick) => {
