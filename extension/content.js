@@ -170,6 +170,11 @@ class AIStudioAdapter {
         if (textarea) {
             textarea.value = promptText
             textarea.dispatchEvent(new Event('input', { bubbles: true }))
+
+            textarea.focus()
+            const length = promptText.length
+            textarea.setSelectionRange(length, length)
+
             if (this.modal) {
                 this.modal.hide()
             }
@@ -357,8 +362,6 @@ class GeminiAdapter {
     async insertPrompt(promptText) {
         const textarea = await this.findPromptInput()
         if (textarea) {
-            textarea.focus()
-
             const lines = promptText.split('\n')
             const htmlContent = lines.map(line => {
                 const escaped = line
@@ -370,6 +373,15 @@ class GeminiAdapter {
 
             textarea.innerHTML = htmlContent
             textarea.dispatchEvent(new Event('input', { bubbles: true }))
+
+            // 聚焦并将光标定位到文字末尾
+            textarea.focus()
+            const range = document.createRange()
+            const sel = window.getSelection()
+            range.selectNodeContents(textarea)
+            range.collapse(false) // false 表示折叠到末尾
+            sel.removeAllRanges()
+            sel.addRange(range)
 
             if (this.modal) {
                 this.modal.hide()
