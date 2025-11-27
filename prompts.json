@@ -29,15 +29,6 @@
         "sub_category": "Cosplay"
     },
     {
-        "title": "24格Q版人物表情包制作器",
-        "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/chibi_sticker_pack.jpg",
-        "prompt": "A 4K resolution, 16:9 image featuring a character sheet with a 4x6 grid layout. The style is cute Q-version (Chibi) anime art, resembling LINE stickers, with half-body portraits. white backgroud.\nSubject: The character from the reference image. Please redesign the poses creatively instead of copying the original image directly. Crucial: Ensure the character's headwear and accessories are drawn correctly and consistently.\nExpressions and Actions:\n第一排：\n1.早安： 面带灿烂的笑容，举起左手挥手打招呼，充满活力。\n2.谢谢： 闭着眼睛，双手乖巧地放在身前，身体微微前倾鞠躬，显得非常礼貌和感激。\n3.疑惑： 歪着头，睁大眼睛一脸茫然，头顶周围冒出几个问号。\n4.哈哈哈： 闭着眼张嘴大笑，肩膀似乎在抖动，周围有笑声符号，显得非常开心。\n5.呜呜呜： 双手握拳放在胸口，两条宽面条泪水直流，张大嘴巴痛哭,看起来很委屈。\n6.晚安： 戴趴在枕头上睡着了，鼻子上还吹着一个鼻涕泡，神态安详。\n第二排：\n7. 好的： 俏皮地眨了一只眼（Wink），竖起右手的大拇指，表示赞同或确认。\n8. 不要： 双手在胸前交叉成X型，眼神冷淡地看向一边，表示坚决的拒绝。\n9. 震惊： 脸色发青（线条阴影），双眼翻白失去高光，嘴巴张成圆形，受到极度惊吓。\n10. 生气： 咬牙切齿，眉头紧锁，周围冒着火光和怒气符号，看起来怒火中烧。\n11. 吃瓜： 手里捧着一片西瓜在吃，眼神向前看，一副\"看热闹不嫌事大\"的旁观者神态。\n12. 害羞： 满脸通红，双手捂住嘴巴，眼神羞涩地看向旁边，显得很不好意思。\n第三排：\n13. 哼： 扭过头去不看人，闭着眼吐出一口气，一副傲娇、不屑或生闷气的样子。\n14. 观察： 手里拿着一个巨大的放大镜放在右眼前，瞪大眼睛仔细查看着什么。\n15. 有点意思： 单手托着下巴，眼神深邃，嘴角露出一抹玩味的微笑，似乎发现了有趣的事情。\n16. 盯~： 变成了简笔画的\"豆豆眼\"，嘴巴抿成一条线，面无表情，大脑一片空白。\n17. 无语： 额头挂着一滴巨大的冷汗，脸色阴沉（蓝色阴影），眼神呆滞，表示极度无奈。\n18. 加油： 双手各挥舞一面红色小旗子，张嘴欢呼，充满激情地为他人应援。\n第四排：\n19. 暗中观察： 躲在一堵墙后面，只探出半个脑袋和一只手，眼神犀利地窥视。\n20. 计划通： 露出阴险得逞的坏笑，眼神犀利（甚至有反光特效），仿佛一切尽在掌握之中。\n21. 累了： 像一滩液体一样瘫软在地上，眼神涣散，似乎魂都丢了，精疲力尽。\n22. 赞： 双眼变成了金色的星星，双手握在胸前，一脸崇拜和兴奋的样子。\n23. 拜拜： 背对镜头，右手举过头顶向后挥手，只留下一个潇洒的背影。\n24. 退下： 戴着黑色墨镜，单手向外挥动，神情冷酷高傲，像大佬一样屏退左右。\nDetails: All text annotations and sound effects must be in handwritten Simplified Chinese. The illustrations should have clean outlines and flat colors typical of sticker packs.",
-        "author": "@Moeary",
-        "mode": "edit",
-        "category": "生活",
-        "sub_category": "表情包"
-    },
-    {
         "title": "拍照解题",
         "preview": "https://linux.do/uploads/default/optimized/4X/1/5/1/1518d978c948fb70ab03c11537db1e1f5136249e_2_1000x1000.jpeg",
         "prompt": "手写图文并茂解答该题",
@@ -63,15 +54,6 @@
         "link": "https://x.com/op7418/status/1991702565579563166",
         "mode": "generate",
         "category": "工作"
-    },
-    {
-        "title": "汽车发动机工作原理3D剖面图",
-        "preview": "https://pbs.twimg.com/media/GzdC8K0b0AEzvVP?format=jpg&name=small",
-        "prompt": "绘制一幅展示汽车发动机工作原理的3D立体剖面设计图，以高度还原的方式精细呈现其内部结构。每个零部件被拆解并有序排列，各部分均配有清晰英文标注，注明结构名称与功能说明，整体布局兼具专业性与视觉逻辑性，呈现出清晰、整洁且极具科技感的解析示意图。",
-        "author": "@berryxia_ai",
-        "link": "https://x.com/berryxia_ai/status/1991474410939940867",
-        "mode": "generate",
-        "category": "学习"
     },
     {
         "title": "瑞克和莫蒂风格科普",
@@ -200,6 +182,15 @@
         "category": "生活"
     },
     {
+        "title": "汽车发动机工作原理3D剖面图",
+        "preview": "https://pbs.twimg.com/media/GzdC8K0b0AEzvVP?format=jpg&name=small",
+        "prompt": "绘制一幅展示汽车发动机工作原理的3D立体剖面设计图，以高度还原的方式精细呈现其内部结构。每个零部件被拆解并有序排列，各部分均配有清晰英文标注，注明结构名称与功能说明，整体布局兼具专业性与视觉逻辑性，呈现出清晰、整洁且极具科技感的解析示意图。",
+        "author": "@berryxia_ai",
+        "link": "https://x.com/berryxia_ai/status/1991474410939940867",
+        "mode": "generate",
+        "category": "学习"
+    },
+    {
         "title": "电商模特试穿",
         "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/ecommerce_model.jpg",
         "prompt": "使用图1（服装）和图2（模特），创建一张超现实的全身时尚照片，让模特穿着这件服装。\n关键合身细节：[T恤/夹克]必须自然地垂在模特身上，贴合其姿势并产生逼真的褶皱。\n高保真保留：极其精确地保留图1中的原始面料质感、颜色和任何标志。\n无缝融合：通过完美匹配环境光、色温和阴影方向，将服装融入图2中。\n摄影风格：干净的电商产品画册（Lookbook）风格，使用佳能EOS R5相机和50mm f/1.8镜头拍摄，呈现自然、专业的外观。",
@@ -301,6 +292,15 @@
         "link": "https://mp.weixin.qq.com/s/lrYNbs4rGs3KOqewoZ6aNQ",
         "mode": "edit",
         "category": "工作"
+    },
+    {
+        "title": "24格Q版人物表情包制作器",
+        "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/chibi_sticker_pack.jpg",
+        "prompt": "A 4K resolution, 16:9 image featuring a character sheet with a 4x6 grid layout. The style is cute Q-version (Chibi) anime art, resembling LINE stickers, with half-body portraits. white backgroud.\nSubject: The character from the reference image. Please redesign the poses creatively instead of copying the original image directly. Crucial: Ensure the character's headwear and accessories are drawn correctly and consistently.\nExpressions and Actions:\n第一排：\n1.早安： 面带灿烂的笑容，举起左手挥手打招呼，充满活力。\n2.谢谢： 闭着眼睛，双手乖巧地放在身前，身体微微前倾鞠躬，显得非常礼貌和感激。\n3.疑惑： 歪着头，睁大眼睛一脸茫然，头顶周围冒出几个问号。\n4.哈哈哈： 闭着眼张嘴大笑，肩膀似乎在抖动，周围有笑声符号，显得非常开心。\n5.呜呜呜： 双手握拳放在胸口，两条宽面条泪水直流，张大嘴巴痛哭,看起来很委屈。\n6.晚安： 戴趴在枕头上睡着了，鼻子上还吹着一个鼻涕泡，神态安详。\n第二排：\n7. 好的： 俏皮地眨了一只眼（Wink），竖起右手的大拇指，表示赞同或确认。\n8. 不要： 双手在胸前交叉成X型，眼神冷淡地看向一边，表示坚决的拒绝。\n9. 震惊： 脸色发青（线条阴影），双眼翻白失去高光，嘴巴张成圆形，受到极度惊吓。\n10. 生气： 咬牙切齿，眉头紧锁，周围冒着火光和怒气符号，看起来怒火中烧。\n11. 吃瓜： 手里捧着一片西瓜在吃，眼神向前看，一副\"看热闹不嫌事大\"的旁观者神态。\n12. 害羞： 满脸通红，双手捂住嘴巴，眼神羞涩地看向旁边，显得很不好意思。\n第三排：\n13. 哼： 扭过头去不看人，闭着眼吐出一口气，一副傲娇、不屑或生闷气的样子。\n14. 观察： 手里拿着一个巨大的放大镜放在右眼前，瞪大眼睛仔细查看着什么。\n15. 有点意思： 单手托着下巴，眼神深邃，嘴角露出一抹玩味的微笑，似乎发现了有趣的事情。\n16. 盯~： 变成了简笔画的\"豆豆眼\"，嘴巴抿成一条线，面无表情，大脑一片空白。\n17. 无语： 额头挂着一滴巨大的冷汗，脸色阴沉（蓝色阴影），眼神呆滞，表示极度无奈。\n18. 加油： 双手各挥舞一面红色小旗子，张嘴欢呼，充满激情地为他人应援。\n第四排：\n19. 暗中观察： 躲在一堵墙后面，只探出半个脑袋和一只手，眼神犀利地窥视。\n20. 计划通： 露出阴险得逞的坏笑，眼神犀利（甚至有反光特效），仿佛一切尽在掌握之中。\n21. 累了： 像一滩液体一样瘫软在地上，眼神涣散，似乎魂都丢了，精疲力尽。\n22. 赞： 双眼变成了金色的星星，双手握在胸前，一脸崇拜和兴奋的样子。\n23. 拜拜： 背对镜头，右手举过头顶向后挥手，只留下一个潇洒的背影。\n24. 退下： 戴着黑色墨镜，单手向外挥动，神情冷酷高傲，像大佬一样屏退左右。\nDetails: All text annotations and sound effects must be in handwritten Simplified Chinese. The illustrations should have clean outlines and flat colors typical of sticker packs.",
+        "author": "@Moeary",
+        "mode": "edit",
+        "category": "生活",
+        "sub_category": "表情包"
     },
     {
         "title": "生成商业促销海报",
