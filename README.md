@@ -1,5 +1,12 @@
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/intro.png?raw=true" width="800">
 
+已支持网站：
+* [Gemini 官网](https://gemini.google.com/)
+* [Google AI Studio](https://aistudio.google.com/)
+* [Gemini Enterprise](https://business.gemini.google/)
+* [kokorolab](https://kokorolab.net/zh/home) 👈🏻 金主爸爸。欢迎更多垂类生图场景的应用合作！
+* 扩展中...
+
 ## 📸 预览
 
 在线网站：https://glidea.github.io/banana-prompt-quicker
@@ -49,15 +56,33 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 
 有留意到 `prompt.json` 第三方网站引用，请做来源注明，本项目也可在 README 中提供外链位置
 
-## TDOO
+## 合作
 
-- [ ] 添加更多提示词。按风格推荐穿搭，虚拟旅游，偶像合照...
+**相关垂类生图应用（穿搭，学习...）可联系合作！**
 
 ## Release NOTE
 
+### 未来
+  * 添加更多实用性提示词。按风格推荐穿搭，虚拟旅游，偶像合照...
+  * 一键录入 X 等社区所分享的 Prompt
+  * 提示词 Trending
+  * 兼容更多 Banana 渠道
+  * [MAY] Svelte 重构
+  * ...
+
+### V1.4.0
+<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.4.0-promo.png?raw=true" width="300">
+
+  * 支持 Gemini Enterprise
+  * 支持 Dynamic Site，你可以在 config.json 中添加 JS selector 适配其它不同渠道！
+  * 支持子分类
+  * 支持编辑自定义提示词
+  * UI/UX 优化
+  * 运营：公告系统、赞助链接、代码重构
+
+### V1.3.0
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.3.0-promo.png?raw=true" width="300">
 
-* V1.3.0
   * 支持在任意网站通过右键菜单进入 Prompt 画廊，插入任意输入框。🍌 Anywhere!
   * 支持灵光模式，引导完成生图需求（"选择比填空容易"）
   * Gemini 再次进入保留页面状态
@@ -65,7 +90,7 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
   * 插入提示词后，光标默认在末尾，便于补充需求
   * 增加随机排序，多一点新鲜感，多一点随手一试
 
-* V1.2.1
+### V1.2.1
   * 修复 Gemini 官网按钮失效，并支持远程热修复
 
 
