@@ -1074,10 +1074,36 @@ class BananaModal {
         content.appendChild(title)
         content.appendChild(bottomRow)
         if (prompt.isCustom) {
+            const btnBg = theme === 'dark' ? 'rgba(48,49,52,0.9)' : 'rgba(255,255,255,0.9)'
+            const btnColor = theme === 'dark' ? '#e8eaed' : '#5f6368'
+
+            // 编辑按钮
+            const editBtn = document.createElement('button')
+            editBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`
+            editBtn.title = '编辑'
+            editBtn.style.cssText = `position: absolute; top: 12px; left: 12px; width: ${mobile ? '36px' : '32px'}; height: ${mobile ? '36px' : '32px'}; border-radius: 50%; border: none; background: ${btnBg}; color: ${btnColor}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; z-index: 2; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);`
+
+            editBtn.onclick = (e) => {
+                e.stopPropagation()
+                this.showAddPromptModal(prompt)
+            }
+
+            if (!mobile) {
+                editBtn.addEventListener('mouseenter', () => {
+                    editBtn.style.transform = 'scale(1.15)'
+                    editBtn.style.boxShadow = '0 6px 16px rgba(0,122,255,0.4)'
+                })
+                editBtn.addEventListener('mouseleave', () => {
+                    editBtn.style.transform = 'scale(1)'
+                    editBtn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
+                })
+            }
+
+            // 删除按钮
             const deleteBtn = document.createElement('button')
-            deleteBtn.textContent = '×'
+            deleteBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>`
             deleteBtn.title = '删除'
-            deleteBtn.style.cssText = `position: absolute; top: 12px; left: 12px; width: ${mobile ? '36px' : '32px'}; height: ${mobile ? '36px' : '32px'}; border-radius: 50%; border: none; background: rgba(0,0,0,0.7); color: white; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; z-index: 2; line-height: 1; padding-bottom: 2px; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);`
+            deleteBtn.style.cssText = `position: absolute; top: 12px; left: ${mobile ? '56px' : '48px'}; width: ${mobile ? '36px' : '32px'}; height: ${mobile ? '36px' : '32px'}; border-radius: 50%; border: none; background: ${btnBg}; color: ${btnColor}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; z-index: 2; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);`
 
             deleteBtn.onclick = (e) => {
                 e.stopPropagation()
@@ -1086,6 +1112,18 @@ class BananaModal {
                 }
             }
 
+            if (!mobile) {
+                deleteBtn.addEventListener('mouseenter', () => {
+                    deleteBtn.style.transform = 'scale(1.15)'
+                    deleteBtn.style.boxShadow = '0 6px 16px rgba(0,0,0,0.25)'
+                })
+                deleteBtn.addEventListener('mouseleave', () => {
+                    deleteBtn.style.transform = 'scale(1)'
+                    deleteBtn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
+                })
+            }
+
+            card.appendChild(editBtn)
             card.appendChild(deleteBtn)
         }
 
@@ -1115,7 +1153,7 @@ class BananaModal {
         this.applyFilters(false)
     }
 
-    showAddPromptModal() {
+    showAddPromptModal(existingPrompt = null) {
         const colors = this.adapter.getThemeColors()
         const mobile = this.isMobile()
 
@@ -1130,7 +1168,7 @@ class BananaModal {
         dialog.onclick = (e) => e.stopPropagation()
 
         const title = document.createElement('h3')
-        title.textContent = '添加自定义 Prompt'
+        title.textContent = existingPrompt ? '编辑自定义 Prompt' : '添加自定义 Prompt'
         title.style.cssText = 'margin: 0 0 8px 0; font-size: 20px; font-weight: 600;'
 
         const createInput = (placeholder, isTextarea = false) => {
@@ -1149,6 +1187,7 @@ class BananaModal {
         }
 
         const titleInput = createInput('标题')
+        if (existingPrompt) titleInput.value = existingPrompt.title
 
         // Image Upload UI
         const imageContainer = document.createElement('div')
@@ -1181,6 +1220,15 @@ class BananaModal {
         previewBtn.onclick = () => fileInput.click()
 
         let selectedFile = null
+
+        // 如果是编辑模式且有预览图,显示预览图
+        if (existingPrompt?.preview && !existingPrompt.preview.includes('gstatic.com')) {
+            previewImg.src = existingPrompt.preview
+            previewImg.style.display = 'block'
+            placeholderIcon.style.display = 'none'
+            previewBtn.style.borderStyle = 'solid'
+            clearImgBtn.style.display = 'flex'
+        }
 
         fileInput.onchange = (e) => {
             if (e.target.files && e.target.files[0]) {
@@ -1228,7 +1276,7 @@ class BananaModal {
             .filter(c => c !== '全部')
             .sort((a, b) => a.localeCompare(b))
 
-        let selectedAddCategory = addCategories[0]
+        let selectedAddCategory = existingPrompt?.category || addCategories[0]
         const categoryTriggerText = document.createElement('span')
         categoryTriggerText.textContent = selectedAddCategory
 
@@ -1339,13 +1387,15 @@ class BananaModal {
 
         // Sub-Category Input
         const subCategoryInput = createInput('子分类 (可选)')
+        if (existingPrompt?.sub_category) subCategoryInput.value = existingPrompt.sub_category
 
         const promptInput = createInput('Prompt 内容', true)
+        if (existingPrompt) promptInput.value = existingPrompt.prompt
         const modeContainer = document.createElement('div')
         modeContainer.style.display = 'flex'
         modeContainer.style.gap = '16px'
 
-        let selectedMode = 'generate'
+        let selectedMode = existingPrompt?.mode || 'generate'
         const createRadio = (value, label) => {
             const labelEl = document.createElement('label')
             labelEl.style.cssText = 'display: flex; align-items: center; gap: 6px; cursor: pointer;'
@@ -1399,7 +1449,7 @@ class BananaModal {
                 return
             }
 
-            let previewDataUrl = 'https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg'
+            let previewDataUrl = existingPrompt?.preview || 'https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg'
 
             if (selectedFile) {
                 try {
@@ -1408,7 +1458,7 @@ class BananaModal {
                     previewDataUrl = await this.compressImage(selectedFile)
                 } catch (err) {
                     console.error('图片压缩失败', err)
-                    alert('图片处理失败，将使用默认图标')
+                    alert('图片处理失败,将使用默认图标')
                 } finally {
                     saveBtn.textContent = '保存'
                     saveBtn.disabled = false
@@ -1417,14 +1467,20 @@ class BananaModal {
 
             const subCategoryVal = subCategoryInput.value.trim()
 
-            await this.saveCustomPrompt({
+            const promptData = {
                 title: titleVal,
                 prompt: promptVal,
                 mode: selectedMode,
                 category: selectedAddCategory,
                 sub_category: subCategoryVal || undefined,
                 preview: previewDataUrl
-            })
+            }
+
+            if (existingPrompt) {
+                await this.updateCustomPrompt(existingPrompt.id, promptData)
+            } else {
+                await this.saveCustomPrompt(promptData)
+            }
             document.body.removeChild(overlay)
             cleanup()
         }
@@ -1461,6 +1517,23 @@ class BananaModal {
         const newPrompts = customPrompts.filter(p => p.id !== promptId)
         await chrome.storage.local.set({ 'banana-custom-prompts': newPrompts })
         await this.loadPrompts()
+    }
+
+    async updateCustomPrompt(promptId, data) {
+        const customPrompts = await this.getCustomPrompts()
+        const index = customPrompts.findIndex(p => p.id === promptId)
+
+        if (index !== -1) {
+            customPrompts[index] = {
+                ...customPrompts[index],
+                ...data,
+                id: promptId,
+                author: 'Me',
+                isCustom: true
+            }
+            await chrome.storage.local.set({ 'banana-custom-prompts': customPrompts })
+            await this.loadPrompts()
+        }
     }
 
     async saveCustomPrompt(data) {
